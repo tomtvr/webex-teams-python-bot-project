@@ -117,7 +117,7 @@ The first new feature that we will add is a `help` command that gives the user a
 
     <summary><b>Hint</b></summary>
 
-    You may find it helpful to use `send_direct_message()` or `send_message_in_room()` which have already been defined for you.
+    You may find it helpful to use the functions `send_direct_message` or `send_message_in_room` which have already been defined for you.
 
     </details>
 
@@ -173,15 +173,26 @@ Currently, once invoking the `create poll` command and submitting the descriptio
 
 ## Multiple votes per person :O
 
-
 As things are, we've got an issue! People can vote multiple times, can you think of a good way to prevent this?
 
 * **Exercise**: Only allow one vote per person. Either send a direct message to the user that they cannot vote more than once, or let the user change their vote and send a new confirmation message.
 
 ## Challenge task!
-Fixing up -- just a second!
 
-## Stuck? Tips for Debugging:
+For this challenge, we will be adding a new commmand `ping poll` that sends a direct message to every member of the space that hasn't submitted their vote yet.
+
+* **Exercise**: Implement `ping poll` that fulfills the description above.
+    <details>
+    <summary><b>Hint</b></summary>
+
+    You might find it helpful to use the API method `teams_api.memberships.list`.
+    </details>
+
+Also, when all the members of the space have submitted their votes, it would be nice to have the poll end automatically instead of waiting for the author to end it.
+
+* **Exercise**: When everyone has already voted, automatically end the poll and display results.
+
+## Stuck? Tips for Debugging
 
 Debugging code is a necessary part of programming. Sometimes stepping though the code seeing how values change can help you track down tricky bugs!
 
