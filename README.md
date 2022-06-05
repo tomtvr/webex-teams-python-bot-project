@@ -184,16 +184,25 @@ Fixing up -- just a second!
 ## Stuck? Tips for Debugging:
 Fixing up -- just a second!
 
+Debugging code is a necessary part of programming. Sometimes stepping though the code seeing how values change can help you track down tricky bugs!
+
+Insert the following at the location you want to break into the debugger:
+```python
+import pdb; pdb.set_trace()
+```
+
+When the line above is executed, you will be dropped into the interactive debugger. For an introduction to the various debugger commands you can use, have a look at the link provided in the resources section.
+
 # Task 4 - Create a new bot of your own
 Now it's time to take everything you have learnt from the previous few tasks and create a bot of your own. 🥳
 
-The theme of this bot should be focussed around improving productivity. 
+The theme of this bot should be focussed around improving productivity.
 
 Here are a few ideas to get you started:
 * A bot to help remind you of important events coming up
 * A bot to help make notes while in class or a meeting
 
-These are just a few ideas, to help with inspiration check out the bot page here: https://apphub.webex.com/bots 
+These are just a few ideas, to help with inspiration check out the bot page here: https://apphub.webex.com/bots
 
 ## Extra Resources
 
