@@ -182,13 +182,8 @@ As things are, we've got an issue! People can vote multiple times, can you think
 For this challenge, we will be adding a new commmand `ping poll` that sends a direct message to every member of the space that hasn't submitted their vote yet.
 
 * **Exercise**: Implement `ping poll` that fulfills the description above.
-    <details>
-    <summary><b>Hint</b></summary>
 
-    You might find it helpful to use the API method `teams_api.memberships.list`.
-    </details>
-
-Also, when all the members of the space have submitted their votes, it would be nice to have the poll end automatically instead of waiting for the author to end it.
+When all the members of the space have submitted their votes, it would be nice to have the poll end automatically instead of waiting for the author to end it manually.
 
 * **Exercise**: When everyone has already voted, automatically end the poll and display results.
 
