@@ -3,8 +3,10 @@ from common.poll import Poll
 from flask import Flask, request
 from common.utils import create_webhook
 from webexteamssdk import WebexTeamsAPI, Webhook
+from decouple import config
 
-WEBEX_TEAMS_ACCESS_TOKEN = '<bot-access-token>'
+#WEBEX_TEAMS_ACCESS_TOKEN = '<bot-access-token>'
+WEBEX_TEAMS_ACCESS_TOKEN = config('WEBEX_TEAMS_ACCESS_TOKEN')
 
 teams_api = None
 all_polls = {}
@@ -142,15 +144,18 @@ def generate_voting_card(roomId):
             "body": [
                 {
                     "type": "TextBlock",
-                    "text": "# Have your say on the poll below!"
+                    "text": "Have your say on the poll below!",
+                    "size": "large"
                 },
                 {
                     "type": "TextBlock",
-                    "text": "## " + all_polls[roomId].name
+                    "text": all_polls[roomId].name,
+                    "size": "medium"
                 },
                 {
                     "type": "TextBlock",
-                    "text": "### " + all_polls[roomId].description
+                    "text": all_polls[roomId].description,
+                    "weight": "bolder"
                 },
                 {
                     "type": "Input.Text",
@@ -179,7 +184,8 @@ def generate_results_card(roomId, results):
             "body": [
                 {
                     "type": "TextBlock",
-                    "text": "# Below are the results!"
+                    "text": "Below are the results!",
+                    "size": "large"
                 },
                 {
                     "type": "Input.Text",
@@ -217,11 +223,12 @@ def start_poll(roomId, sender):
 def end_poll(roomId, sender):
     if all_polls[roomId].author == sender:
         if all_polls[roomId].started:
+            all_polls[roomId].started = False
             teams_api.messages.create(roomId=roomId, text="Card Unsupported", attachments=[generate_results_card(roomId, all_polls[roomId].collate_results())])
         else:
-            send_message_in_room(roomId, "Poll hasn't been started yet")
+            send_message_in_room(roomId, "Error: poll hasn't been started yet")
     else:
-        send_message_in_room(roomId, "Only the poll's author can end the poll")
+        send_message_in_room(roomId, "Error: only the poll's author can end the poll")
 
 @app.route('/attachmentActions_webhook', methods=['POST'])
 def attachmentActions_webhook():
