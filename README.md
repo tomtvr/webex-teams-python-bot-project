@@ -1,6 +1,6 @@
-# Cisco Webex Teams Bot: Getting Started
+# Cisco Webex Bot Project
 
-A Cisco Webex Teams bot is an automated user within the Webex Teams platform that can be interacted with, enhancing the user experience within an organisation.
+A Cisco Webex bot is an automated user within the Webex platform that can be interacted with, enhancing the user experience within an organisation.
 
 # Task 1 - Set up and run hello bot
 
@@ -43,10 +43,10 @@ Open a terminal and you can start working on your home directory (`/Users/<usern
 Clone the git repository to your local machine by running the following command on your terminal.
 
 ```sh
-git clone https://github.com/sarupanda/webex-teams-python-bot.git --recursive
+git clone git@github.com:tomtvr/webex-teams-python-bot-project.git --recursive
 ```
 
-To go to the directory you have just cloned simply run `cd webex-teams-python-bot`. Try running `ls` and check that you can see all the files you will need to get your Bot up and running.
+To go to the directory you have just cloned simply run `cd webex-teams-python-bot-project`. Try running `ls` and check that you can see all the files you will need to get your Bot up and running.
 
 After installing Python, open terminal and run the following command to install dependencies.
 
@@ -58,10 +58,10 @@ pip3 install flask requests ./webexteamssdk
 
 ### 1. Run Ngrok
 
-Unzip the ngrok file that you downloaded above and copy the executable file to the `webex-teams-python-bot` folder. On a terminal window, go to this directory and run the following command to expose a web server on port 5000 of your local machine to the internet.
+Unzip the ngrok file that you downloaded above and copy the executable file to the `webex-teams-python-bot-project` folder. On a terminal window, go to this directory and run the following command to expose a web server on port 12000 of your local machine to the internet.
 
 ```sh
-./ngrok http 5000
+./ngrok http 12000
 ```
 
 ### 2. Configure Access Token
@@ -79,7 +79,7 @@ python3 task1.py
 ```
 
 ### 4. Interact with your Bot
-Login to your [Webex Teams](https://teams.webex.com/) account and **Create a Space** by clicking the **+** button. Then, enter your Bot Username (something like **XXXX@webex.bot**) as well as your own email address.
+Login to your [Webex](https://web.webex.com/sign-in) account and **Create a Space** by clicking the **+** button. Then, enter your Bot Username (something like **XXXX@webex.bot**) as well as your own email address.
 
 To start interacting with the bot type `@<bot_name>` along with your message. For example if the bot was called "HelloBot" you would type `@HelloBot hello`
 
@@ -99,7 +99,7 @@ python3 task2.py
 Make sure that ngrok is also running like in the previous task in a sepperate terminal.
 
 ## 3. - Create some polls
-Login to your [Webex Teams](https://teams.webex.com/) account and **Create a Space** by clicking the **+** button. Then, enter your Bot Username (something like **XXXX@webex.bot**) as well as your own email address. The bot has four commands: `create poll`, `add option`, `start poll` and `end poll`. To invoke one of those commands, type `@<bot_name>`, a space, and then the command.
+Login to your [Webex](https://web.webex.com/sign-in) account and **Create a Space** by clicking the **+** button. Then, enter your Bot Username (something like **XXXX@webex.bot**) as well as your own email address. The bot has four commands: `create poll`, `add option`, `start poll` and `end poll`. To invoke one of those commands, type `@<bot_name>`, a space, and then the command.
 
 For example, if your bot was named John, to create a poll, you would type `@John create poll` and send that into the space.
 
@@ -109,8 +109,17 @@ For example, if your bot was named John, to create a poll, you would type `@John
 
 
 # Task 4 - Create a new bot of your own
+Now it's time to take everything you have learnt from the previous few tasks and create a bot of your own. 🥳
 
-## Resources
+The theme of this bot should be focussed around improving productivity. 
+
+Here are a few ideas to get you started:
+* A bot to help remind you of important events coming up
+* A bot to help make notes while in class or a meeting
+
+These are just a few ideas, to help with inspiration check out the bot page here: https://apphub.webex.com/bots 
+
+## Extra Resources
 
 * [Cisco Webex for Developers](https://developer.webex.com/docs/platform-introduction): Platform documentation
 * [Webex Teams APIs](https://webexteamssdk.readthedocs.io/): Webex Teams SDK documentation
