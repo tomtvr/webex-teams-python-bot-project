@@ -182,7 +182,6 @@ As things are, we've got an issue! People can vote multiple times, can you think
 Fixing up -- just a second!
 
 ## Stuck? Tips for Debugging:
-Fixing up -- just a second!
 
 Debugging code is a necessary part of programming. Sometimes stepping though the code seeing how values change can help you track down tricky bugs!
 
@@ -212,3 +211,4 @@ These are just a few ideas, to help with inspiration check out the bot page here
 * [Adaptive Cards Spec](https://adaptivecards.io/explorer/): Schema Explorer for Adaptive Cards and interactive online demo
 * [Cisco Webex Teams App Hub](https://apphub.webex.com/categories): Get some inspiration to develop your own bot from this list of Cisco Webex Teams Bot examples
 * [RapidAPI](https://rapidapi.com/): The world's largest API directory
+* [Python Debugger](https://docs.python.org/3/library/pdb.html): An interactive source code debugger for Python programs
