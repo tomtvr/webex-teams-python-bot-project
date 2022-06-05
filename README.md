@@ -58,10 +58,10 @@ pip3 install flask requests ./webexteamssdk
 
 ### 1. Run Ngrok
 
-Unzip the ngrok file that you downloaded above and copy the executable file to the `webex-teams-python-bot-project` folder. On a terminal window, go to this directory and run the following command to expose a web server on port 5000 of your local machine to the internet.
+Unzip the ngrok file that you downloaded above and copy the executable file to the `webex-teams-python-bot-project` folder. On a terminal window, go to this directory and run the following command to expose a web server on port 12000 of your local machine to the internet.
 
 ```sh
-./ngrok http 5000
+./ngrok http 12000
 ```
 
 ### 2. Configure Access Token
