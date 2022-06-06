@@ -79,7 +79,7 @@ python3 task1.py
 ```
 
 ### 4. Interact with your Bot
-Login to your [Webex](https://web.webex.com/sign-in) account and **Create a Space** by clicking the **+** button. Then, enter your Bot Username (something like **XXXX@webex.bot**) as well as your own email address.
+Login to your [Webex](https://web.webex.com/sign-in) account and **Create a Space** by clicking the **+** button. Then, enter your Bot Username (something like **XXXX@webex.bot**).
 
 To start interacting with the bot, type `@<bot_name>` along with your message. For example, if the bot was called "HelloBot" you would type `@HelloBot hello`
 
@@ -99,9 +99,13 @@ python3 task2.py
 Make sure that ngrok is also running like in the previous task in a separate terminal.
 
 ## 3. - Create some polls
-Login to your [Webex](https://web.webex.com/sign-in) account and **Create a Space** by clicking the **+** button. Then, enter your Bot Username (something like **XXXX@webex.bot**) as well as your own email address. The bot has four commands: `create poll`, `add option`, `start poll` and `end poll`. To invoke one of those commands, type `@<bot_name>`, a space, and then the command.
+Login to your [Webex](https://web.webex.com/sign-in) account and **Create a Space** by clicking the **+** button. Then, enter your Bot Username (something like **XXXX@webex.bot**) along with all the people you want to take part in the poll. The bot has four commands: `create poll`, `add option`, `start poll` and `end poll`. To invoke one of those commands, type `@<bot_name>`, a space, and then the command. For example `@PollBot create poll`.
 
-For example, if your bot was named John, to create a poll, you would type `@John create poll` and send that into the space.
+### How to use the bot
+1. Start by using the `create poll` command to create an initial poll. The bot will message you 1 to 1 with a card to get started.
+2. Everyone in the space can then add options for the poll using the command `add option`. An adaptive card will be messaged 1 to 1 to add the option to the poll.
+3. Once all the options have been added use the command `start poll`. An adaptive card should now appear in the space for people to start voting.
+4. Once everyone has voted run `end poll` to get the results in the space.
 
 # Task 3 - Make improvements to Poll Bot
 
